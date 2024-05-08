@@ -1,0 +1,5 @@
+NET "fclk" LOC = "P56";
+NET "fclk" TNM_NET = "fclk";
+TIMESPEC "TS_CLK" = PERIOD "fclk" 20 ns HIGH 50 %; 
+NET "LED1" LOC = "P121";
+NET "LED2" LOC = "P123";

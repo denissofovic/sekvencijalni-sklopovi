@@ -1,0 +1,8 @@
+top_tb.fclk
+top_tb.adcval[7:0]
+top_tb.thresh[7:0]
+top_tb.qi
+top_tb.qc
+top_tb.result
+
+

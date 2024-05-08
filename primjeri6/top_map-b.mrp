@@ -1,0 +1,443 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -w -p xc6slx9-2-tqg144 -ir off -pr b -detail -ol std
+-logic_opt off -c 100 -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu Apr  2 12:27:02 2020
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                   289 out of  11,440    2%
+    Number used as Flip Flops:                 289
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        601 out of   5,720   10%
+    Number used as logic:                      594 out of   5,720   10%
+      Number using O6 output only:             291
+      Number using O5 output only:             210
+      Number using O5 and O6:                   93
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,440    0%
+    Number used exclusively as route-thrus:      7
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         7
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   172 out of   1,430   12%
+  Number of MUXCYs used:                       312 out of   2,860   10%
+  Number of LUT Flip Flop pairs used:          602
+    Number with an unused Flip Flop:           324 out of     602   53%
+    Number with an unused LUT:                   1 out of     602    1%
+    Number of fully used LUT-FF pairs:         277 out of     602   46%
+    Number of unique control sets:               7
+    Number of slice register sites lost
+      to control set restrictions:              15 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                         4 out of     102    3%
+    Number of LOCed IOBs:                        4 out of       4  100%
+    IOB Flip Flops:                              3
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   3 out of     200    1%
+    Number used as OLOGIC2s:                     3
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      16    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.61
+
+Peak Memory Usage:  671 MB
+Total REAL time to MAP completion:  27 secs 
+Total CPU time to MAP completion:   26 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+ 216 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<1>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<2>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<3>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<4>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<5>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<6>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<7>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<8>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<9>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<10>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<11>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<12>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<13>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<14>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<15>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<16>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<17>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<18>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<19>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<20>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<21>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<22>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<23>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<24>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<25>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<26>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<27>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<28>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<29>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_cy<30>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<1>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<2>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<3>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<4>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<5>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<6>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<7>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<8>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<9>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<10>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<11>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<12>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<13>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<14>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<15>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<16>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<17>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<18>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<19>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<20>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<21>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<22>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<23>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<24>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<25>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<26>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<27>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<28>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<29>_rt
+LUT1 		Madd_cntstep[31]_GND_4_o_add_5_OUT_cy<30>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<1>_rt
+LUT1 		Mcount_cntcolor_cy<1>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<2>_rt
+LUT1 		Mcount_cntcolor_cy<2>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<3>_rt
+LUT1 		Mcount_cntcolor_cy<3>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<4>_rt
+LUT1 		Mcount_cntcolor_cy<4>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<5>_rt
+LUT1 		Mcount_cntcolor_cy<5>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<6>_rt
+LUT1 		Mcount_cntcolor_cy<6>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<7>_rt
+LUT1 		Mcount_cntcolor_cy<7>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<8>_rt
+LUT1 		Mcount_cntcolor_cy<8>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<9>_rt
+LUT1 		Mcount_cntcolor_cy<9>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<10>_rt
+LUT1 		Mcount_cntcolor_cy<10>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<11>_rt
+LUT1 		Mcount_cntcolor_cy<11>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<12>_rt
+LUT1 		Mcount_cntcolor_cy<12>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<13>_rt
+LUT1 		Mcount_cntcolor_cy<13>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<14>_rt
+LUT1 		Mcount_cntcolor_cy<14>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<15>_rt
+LUT1 		Mcount_cntcolor_cy<15>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<16>_rt
+LUT1 		Mcount_cntcolor_cy<16>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<17>_rt
+LUT1 		Mcount_cntcolor_cy<17>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<18>_rt
+LUT1 		Mcount_cntcolor_cy<18>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<19>_rt
+LUT1 		Mcount_cntcolor_cy<19>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<20>_rt
+LUT1 		Mcount_cntcolor_cy<20>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<21>_rt
+LUT1 		Mcount_cntcolor_cy<21>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<22>_rt
+LUT1 		Mcount_cntcolor_cy<22>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<23>_rt
+LUT1 		Mcount_cntcolor_cy<23>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<24>_rt
+LUT1 		Mcount_cntcolor_cy<24>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<25>_rt
+LUT1 		Mcount_cntcolor_cy<25>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<26>_rt
+LUT1 		Mcount_cntcolor_cy<26>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<27>_rt
+LUT1 		Mcount_cntcolor_cy<27>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<28>_rt
+LUT1 		Mcount_cntcolor_cy<28>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<29>_rt
+LUT1 		Mcount_cntcolor_cy<29>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_cy<30>_rt
+LUT1 		Mcount_cntcolor_cy<30>_rt
+LUT1 		pwmb/Mcount_cnt_cy<1>_rt
+LUT1 		pwmb/Mcount_cnt_cy<2>_rt
+LUT1 		pwmb/Mcount_cnt_cy<3>_rt
+LUT1 		pwmb/Mcount_cnt_cy<4>_rt
+LUT1 		pwmb/Mcount_cnt_cy<5>_rt
+LUT1 		pwmb/Mcount_cnt_cy<6>_rt
+LUT1 		pwmb/Mcount_cnt_cy<7>_rt
+LUT1 		pwmb/Mcount_cnt_cy<8>_rt
+LUT1 		pwmb/Mcount_cnt_cy<9>_rt
+LUT1 		pwmb/Mcount_cnt_cy<10>_rt
+LUT1 		pwmb/Mcount_cnt_cy<11>_rt
+LUT1 		pwmb/Mcount_cnt_cy<12>_rt
+LUT1 		pwmb/Mcount_cnt_cy<13>_rt
+LUT1 		pwmb/Mcount_cnt_cy<14>_rt
+LUT1 		pwmb/Mcount_cnt_cy<15>_rt
+LUT1 		pwmb/Mcount_cnt_cy<16>_rt
+LUT1 		pwmb/Mcount_cnt_cy<17>_rt
+LUT1 		pwmb/Mcount_cnt_cy<18>_rt
+LUT1 		pwmb/Mcount_cnt_cy<19>_rt
+LUT1 		pwmb/Mcount_cnt_cy<20>_rt
+LUT1 		pwmb/Mcount_cnt_cy<21>_rt
+LUT1 		pwmb/Mcount_cnt_cy<22>_rt
+LUT1 		pwmb/Mcount_cnt_cy<23>_rt
+LUT1 		pwmb/Mcount_cnt_cy<24>_rt
+LUT1 		pwmb/Mcount_cnt_cy<25>_rt
+LUT1 		pwmb/Mcount_cnt_cy<26>_rt
+LUT1 		pwmb/Mcount_cnt_cy<27>_rt
+LUT1 		pwmb/Mcount_cnt_cy<28>_rt
+LUT1 		pwmb/Mcount_cnt_cy<29>_rt
+LUT1 		pwmb/Mcount_cnt_cy<30>_rt
+LUT1 		pwmg/Mcount_cnt_cy<1>_rt
+LUT1 		pwmg/Mcount_cnt_cy<2>_rt
+LUT1 		pwmg/Mcount_cnt_cy<3>_rt
+LUT1 		pwmg/Mcount_cnt_cy<4>_rt
+LUT1 		pwmg/Mcount_cnt_cy<5>_rt
+LUT1 		pwmg/Mcount_cnt_cy<6>_rt
+LUT1 		pwmg/Mcount_cnt_cy<7>_rt
+LUT1 		pwmg/Mcount_cnt_cy<8>_rt
+LUT1 		pwmg/Mcount_cnt_cy<9>_rt
+LUT1 		pwmg/Mcount_cnt_cy<10>_rt
+LUT1 		pwmg/Mcount_cnt_cy<11>_rt
+LUT1 		pwmg/Mcount_cnt_cy<12>_rt
+LUT1 		pwmg/Mcount_cnt_cy<13>_rt
+LUT1 		pwmg/Mcount_cnt_cy<14>_rt
+LUT1 		pwmg/Mcount_cnt_cy<15>_rt
+LUT1 		pwmg/Mcount_cnt_cy<16>_rt
+LUT1 		pwmg/Mcount_cnt_cy<17>_rt
+LUT1 		pwmg/Mcount_cnt_cy<18>_rt
+LUT1 		pwmg/Mcount_cnt_cy<19>_rt
+LUT1 		pwmg/Mcount_cnt_cy<20>_rt
+LUT1 		pwmg/Mcount_cnt_cy<21>_rt
+LUT1 		pwmg/Mcount_cnt_cy<22>_rt
+LUT1 		pwmg/Mcount_cnt_cy<23>_rt
+LUT1 		pwmg/Mcount_cnt_cy<24>_rt
+LUT1 		pwmg/Mcount_cnt_cy<25>_rt
+LUT1 		pwmg/Mcount_cnt_cy<26>_rt
+LUT1 		pwmg/Mcount_cnt_cy<27>_rt
+LUT1 		pwmg/Mcount_cnt_cy<28>_rt
+LUT1 		pwmg/Mcount_cnt_cy<29>_rt
+LUT1 		pwmg/Mcount_cnt_cy<30>_rt
+LUT1 		pwmr/Mcount_cnt_cy<1>_rt
+LUT1 		pwmr/Mcount_cnt_cy<2>_rt
+LUT1 		pwmr/Mcount_cnt_cy<3>_rt
+LUT1 		pwmr/Mcount_cnt_cy<4>_rt
+LUT1 		pwmr/Mcount_cnt_cy<5>_rt
+LUT1 		pwmr/Mcount_cnt_cy<6>_rt
+LUT1 		pwmr/Mcount_cnt_cy<7>_rt
+LUT1 		pwmr/Mcount_cnt_cy<8>_rt
+LUT1 		pwmr/Mcount_cnt_cy<9>_rt
+LUT1 		pwmr/Mcount_cnt_cy<10>_rt
+LUT1 		pwmr/Mcount_cnt_cy<11>_rt
+LUT1 		pwmr/Mcount_cnt_cy<12>_rt
+LUT1 		pwmr/Mcount_cnt_cy<13>_rt
+LUT1 		pwmr/Mcount_cnt_cy<14>_rt
+LUT1 		pwmr/Mcount_cnt_cy<15>_rt
+LUT1 		pwmr/Mcount_cnt_cy<16>_rt
+LUT1 		pwmr/Mcount_cnt_cy<17>_rt
+LUT1 		pwmr/Mcount_cnt_cy<18>_rt
+LUT1 		pwmr/Mcount_cnt_cy<19>_rt
+LUT1 		pwmr/Mcount_cnt_cy<20>_rt
+LUT1 		pwmr/Mcount_cnt_cy<21>_rt
+LUT1 		pwmr/Mcount_cnt_cy<22>_rt
+LUT1 		pwmr/Mcount_cnt_cy<23>_rt
+LUT1 		pwmr/Mcount_cnt_cy<24>_rt
+LUT1 		pwmr/Mcount_cnt_cy<25>_rt
+LUT1 		pwmr/Mcount_cnt_cy<26>_rt
+LUT1 		pwmr/Mcount_cnt_cy<27>_rt
+LUT1 		pwmr/Mcount_cnt_cy<28>_rt
+LUT1 		pwmr/Mcount_cnt_cy<29>_rt
+LUT1 		pwmr/Mcount_cnt_cy<30>_rt
+LUT1 		Madd_state[31]_GND_4_o_add_2_OUT_xor<31>_rt
+LUT1 		Madd_cntcolor[31]_GND_4_o_add_0_OUT_xor<31>_rt
+LUT1 		Mcount_cntcolor_xor<31>_rt
+LUT1 		pwmb/Mcount_cnt_xor<31>_rt
+LUT1 		pwmg/Mcount_cnt_xor<31>_rt
+LUT1 		pwmr/Mcount_cnt_xor<31>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| fclk                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| ledb                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| ledg                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| ledr                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+
+Section 12 - Control Set Information
+------------------------------------
++---------------------------------------------------------------------------------------------------------------+
+| Clock Signal | Reset Signal        | Set Signal | Enable Signal           | Slice Load Count | Bel Load Count |
++---------------------------------------------------------------------------------------------------------------+
+| fclk_BUFGP   |                     |            |                         | 15               | 65             |
+| fclk_BUFGP   |                     |            | _n0223_inv1_cepot       | 33               | 94             |
+| fclk_BUFGP   |                     |            | _n0223_inv1_cepot_cepot | 2                | 2              |
+| fclk_BUFGP   | Mcompar_n0001_cy<4> |            |                         | 8                | 32             |
+| fclk_BUFGP   | pwmb/_n0017         |            |                         | 8                | 32             |
+| fclk_BUFGP   | pwmg/_n0017         |            |                         | 8                | 32             |
+| fclk_BUFGP   | pwmr/_n0017         |            |                         | 8                | 32             |
++---------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical  |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| top/               |           | 125/173       | 193/289       | 439/601       | 0/0           | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0   | 0/0       | top                |
+| +pwmb              |           | 16/16         | 32/32         | 54/54         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top/pwmb           |
+| +pwmg              |           | 16/16         | 32/32         | 54/54         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top/pwmg           |
+| +pwmr              |           | 16/16         | 32/32         | 54/54         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top/pwmr           |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

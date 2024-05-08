@@ -1,0 +1,5 @@
+top_tb.fclk
+top_tb.insig
+top_tb.avrval[7:0]
+
+

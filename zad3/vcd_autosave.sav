@@ -1,0 +1,6 @@
+top_tb.fclk
+top_tb.sigval[7:0]
+top_tb.modsig
+top_tb.mi
+top_tb.mc
+

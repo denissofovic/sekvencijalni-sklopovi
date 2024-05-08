@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Mar 10 22:37:41 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LED0" LOCATE = SITE "P121" LEVEL 1;
+COMP "BTN0" LOCATE = SITE "P119" LEVEL 1;
+COMP "LED1" LOCATE = SITE "P123" LEVEL 1;
+COMP "BTN1" LOCATE = SITE "P120" LEVEL 1;
+COMP "LED2" LOCATE = SITE "P124" LEVEL 1;
+COMP "BTN2" LOCATE = SITE "P134" LEVEL 1;
+COMP "YOUT" LOCATE = SITE "P126" LEVEL 1;
+SCHEMATIC END;
+

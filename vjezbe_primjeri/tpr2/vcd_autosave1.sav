@@ -1,0 +1,5 @@
+top_tb.fclk
+top_tb.a[3:0]
+top_tb.b[3:0]
+top_tb.out1[3:0]
+top_tb.carry

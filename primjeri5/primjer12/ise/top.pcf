@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Mar 26 21:51:44 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "pwm_out" LOCATE = SITE "P121" LEVEL 1;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "btn" LOCATE = SITE "P120" LEVEL 1;
+COMP "ctrl" LOCATE = SITE "P126" LEVEL 1;
+TIMEGRP clk = BEL "ctrl" BEL "pwm_out" BEL "cnt_0" BEL "cnt_1" BEL "cnt_2" BEL
+        "cnt_3" BEL "cnt_4" BEL "cnt_5" BEL "cnt_6" BEL "cnt_7" BEL "cnt_8"
+        BEL "cnt_9" BEL "cnt_10" BEL "cnt_11" BEL "cnt_12" BEL "cnt_13" BEL
+        "cnt_14" BEL "dutycnt_0" BEL "dutycnt_1" BEL "dutycnt_2" BEL
+        "dutycnt_3" BEL "dutycnt_4" BEL "dutycnt_5" BEL "dutycnt_6" BEL
+        "dutycnt_7" BEL "dutycnt_8" BEL "dutycnt_9" BEL "duty_0" BEL "duty_1"
+        BEL "duty_3" BEL "duty_2" BEL "duty_4" BEL "duty_5" BEL "duty_6" BEL
+        "duty_7" BEL "duty_8" BEL "duty_9" BEL "duty_10" BEL "duty_11" BEL
+        "duty_12" BEL "duty_13" BEL "duty_14" BEL "tmp" BEL "clk_BUFGP/BUFG";
+TS_CLK = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

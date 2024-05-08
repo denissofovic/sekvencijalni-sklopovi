@@ -1,0 +1,50 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Apr 02 15:07:14 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led<0>" LOCATE = SITE "P121" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "P123" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "P124" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "P126" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "P127" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "P131" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "P132" LEVEL 1;
+COMP "fclk" LOCATE = SITE "P56" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "P134" LEVEL 1;
+COMP "drx" LOCATE = SITE "P79" LEVEL 1;
+COMP "dtx" LOCATE = SITE "P78" LEVEL 1;
+TIMEGRP fclk = BEL "led_0" BEL "led_1" BEL "led_2" BEL "led_3" BEL "led_4" BEL
+        "led_5" BEL "led_6" BEL "led_7" BEL "urxstate_FSM_FFd1" BEL
+        "inst_uart/read.idx_2" BEL "inst_uart/read.idx_1" BEL
+        "inst_uart/read.idx_0" BEL "inst_uart/read.pause_6" BEL
+        "inst_uart/read.pause_4" BEL "inst_uart/read.pause_2" BEL
+        "inst_uart/rxdata_7" BEL "inst_uart/rxdata_6" BEL "inst_uart/rxdata_5"
+        BEL "inst_uart/rxdata_4" BEL "inst_uart/rxdata_3" BEL
+        "inst_uart/rxdata_2" BEL "inst_uart/rxdata_1" BEL "inst_uart/rxdata_0"
+        BEL "inst_uart/read.pause_3" BEL "inst_uart/read.pause_1" BEL
+        "inst_uart/rc" BEL "inst_uart/read.cnt_31" BEL "inst_uart/read.cnt_30"
+        BEL "inst_uart/read.cnt_29" BEL "inst_uart/read.cnt_28" BEL
+        "inst_uart/read.cnt_27" BEL "inst_uart/read.cnt_26" BEL
+        "inst_uart/read.cnt_25" BEL "inst_uart/read.cnt_24" BEL
+        "inst_uart/read.cnt_23" BEL "inst_uart/read.cnt_22" BEL
+        "inst_uart/read.cnt_21" BEL "inst_uart/read.cnt_20" BEL
+        "inst_uart/read.cnt_19" BEL "inst_uart/read.cnt_18" BEL
+        "inst_uart/read.cnt_17" BEL "inst_uart/read.cnt_16" BEL
+        "inst_uart/read.cnt_15" BEL "inst_uart/read.cnt_14" BEL
+        "inst_uart/read.cnt_13" BEL "inst_uart/read.cnt_12" BEL
+        "inst_uart/read.cnt_11" BEL "inst_uart/read.cnt_10" BEL
+        "inst_uart/read.cnt_9" BEL "inst_uart/read.cnt_8" BEL
+        "inst_uart/read.cnt_7" BEL "inst_uart/read.cnt_6" BEL
+        "inst_uart/read.cnt_5" BEL "inst_uart/read.cnt_4" BEL
+        "inst_uart/read.cnt_3" BEL "inst_uart/read.cnt_2" BEL
+        "inst_uart/read.cnt_1" BEL "inst_uart/read.cnt_0" BEL
+        "inst_uart/rdata_7" BEL "inst_uart/rdata_6" BEL "inst_uart/rdata_5"
+        BEL "inst_uart/rdata_4" BEL "inst_uart/rdata_3" BEL
+        "inst_uart/rdata_2" BEL "inst_uart/rdata_1" BEL "inst_uart/rdata_0"
+        BEL "inst_uart/read.state_3" BEL "inst_uart/read.state_2" BEL
+        "inst_uart/read.state_1" BEL "inst_uart/read.state_0" BEL
+        "inst_uart/read.state_0_1" BEL "fclk_BUFGP/BUFG";
+TS_CLK = PERIOD TIMEGRP "fclk" 10 ns HIGH 50%;
+SCHEMATIC END;
+

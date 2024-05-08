@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Apr 02 13:51:19 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led" LOCATE = SITE "P133" LEVEL 1;
+COMP "fclk" LOCATE = SITE "P56" LEVEL 1;
+COMP "btn" LOCATE = SITE "P120" LEVEL 1;
+TIMEGRP iclk = BEL "led" BEL "cnt_0" BEL "cnt_1" BEL "cnt_2" BEL "cnt_3" BEL
+        "cnt_4" BEL "cnt_5" BEL "cnt_6" BEL "cnt_7" BEL "cnt_8" BEL "cnt_9"
+        BEL "cnt_10" BEL "cnt_11" BEL "cnt_12" BEL "cnt_13" BEL "cnt_14" BEL
+        "cnt_15" BEL "cnt_16" BEL "cnt_17" BEL "dflag_0" BEL
+        "fclk_BUFGP/BUFG";
+SCHEMATIC END;
+

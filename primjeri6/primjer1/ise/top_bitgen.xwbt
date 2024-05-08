@@ -1,0 +1,7 @@
+INFILE=/home/asmir/Desktop/Dropbox/untz-work/fe_predavanja/fe_sekvencijalni_sklopovi/predavanja/sesk_p06/primjeri/primjer1/ise/top.ncd
+OUTFILE=/home/asmir/Desktop/Dropbox/untz-work/fe_predavanja/fe_sekvencijalni_sklopovi/predavanja/sesk_p06/primjeri/primjer1/ise/top.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/asmir/Desktop/Dropbox/untz-work/fe_predavanja/fe_sekvencijalni_sklopovi/predavanja/sesk_p06/primjeri/primjer1/ise
+LICENSE=WebPack
+USER_INFO=__0_0_0

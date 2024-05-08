@@ -1,0 +1,14 @@
+NET "fclk" LOC = "P56";
+NET "fclk" TNM_NET = "fclk";
+TIMESPEC "TS_CLK" = PERIOD "fclk" 10 ns HIGH 50 %; 
+NET "dtx" LOC = "P78" | IOSTANDARD=LVCMOS33 | DRIVE=12;
+NET "drx" LOC = "P79" | IOSTANDARD=LVCMOS33 | DRIVE=12;
+NET "led(0)" LOC = "P121";
+NET "led(1)" LOC = "P123";
+NET "led(2)" LOC = "P124";
+NET "led(3)" LOC = "P126";
+NET "led(4)" LOC = "P127";
+NET "led(5)" LOC = "P131";
+NET "led(6)" LOC = "P132";
+NET "led(7)" LOC = "P134";
+
