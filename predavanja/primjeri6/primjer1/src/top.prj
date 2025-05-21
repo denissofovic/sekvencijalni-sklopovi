@@ -1,2 +1,0 @@
-vhdl work "../src/top.vhd"
-vhdl work "../src/pwm.vhd"

@@ -1,7 +1,0 @@
-v 4
-file . "top.vhd" "6f2ca543d938c8bda570446ed629da5c1d185786" "20220420110543.768":
-  entity top at 1( 0) + 0 on 57;
-  architecture arctop of top at 11( 190) + 0 on 58;
-file . "top_tb.vhd" "ae24fe0ff8b038bb740686ef34642355f0fd123f" "20220420110543.777":
-  entity top_tb at 1( 0) + 0 on 59;
-  architecture arctop_tb of top_tb at 7( 74) + 0 on 60;

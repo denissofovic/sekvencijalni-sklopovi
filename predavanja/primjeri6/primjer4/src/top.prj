@@ -1,2 +1,0 @@
-vhdl work "../src/uart.vhd"
-vhdl work "../src/top.vhd"
